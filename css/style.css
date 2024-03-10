@@ -56,6 +56,11 @@ html{
     box-sizing: inherit;
 }
 
+*:focus{
+    outline: 2px dotted var(--purple);
+    outline-offset: 3px;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -103,6 +108,7 @@ display: flex;
 }
 
 .hero-main {
+    flex-grow: 1;
     --text-color:#fff;
     display: flex;
     flex-direction: column;
@@ -147,6 +153,70 @@ display: flex;
     text-align: center;
 }
 
+.signup-form {
+    width: 100%;
+    max-width: 570px;
+    padding: 55px 60px 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.signup-form-headig {
+    color: #000;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+    margin: 0;
+    margin-bottom: 80px;
+}
+
+.input-fieds {
+    margin-bottom: 63px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    border: 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 14px;
+}
+
+.form-input:not(:last-child){
+    margin-bottom: 35px;
+}
+
+.button {
+    width: 100%;
+    display: block;
+    padding: 20px 0;
+    background-color: var(--purple);
+    color: #fff;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.signup-form-notice {
+    color: #555;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+}
+
+.signup-form-notice-link {
+    color: #f03535;
+    font-weight: 500;
+    text-decoration-line: underline;
+}
+
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -155,5 +225,8 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
-
+.hero-main{
+    background-image: url("../img/Rectangle\ 6@2x.jpg");
+    background-repeat: no-repeat;
+}
 }
